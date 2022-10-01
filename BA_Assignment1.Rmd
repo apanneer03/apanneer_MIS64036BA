@@ -1,0 +1,48 @@
+---
+title: "Assignment 1"
+output: html_notebook
+---
+
+```{r}
+
+# Installing package ISLR
+install.packages("ISLR")
+library(ISLR)
+```
+
+```{r}
+# Summary and Number of rows in Carseat dataset
+
+summary(Carseats)
+nrow(Carseats)
+```
+
+```{r}
+# Maximum Value of Carseat
+
+max(Carseats$Advertising)
+```
+```{r}
+# IQR of Price Attribute
+
+IQR(Carseats$Price)
+```
+```{r}
+# Plotting Sales against Price
+
+ggplot(Carseats, aes (x= Price, y= Sales)) + geom_col()
+
+```
+```{r}
+# Finding Corelation coefficient
+
+x<- Carseats$Price
+y<- Carseats$Sales
+cor(x,y)
+
+# The correlation coefficient is -0.4449507. A negative correlation indicates two variables (Sales and Price) that tend to move in opposite directions.
+# A correlation coefficient of -0.8 or lower indicates a strong negative relationship.
+```
+
+
+
